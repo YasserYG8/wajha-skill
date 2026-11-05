@@ -1,0 +1,34 @@
+{
+  "noor": {
+    "id": "noor",
+    "format": "wajha.template",
+    "version": 1,
+    "slides": 5,
+    "assets": 0,
+    "layoutKeys": [
+      "tall"
+    ],
+    "languages": [
+      "en-US",
+      "ar-SA"
+    ],
+    "validateTemplateChanges": 0,
+    "firstChanges": []
+  },
+  "lagoon": {
+    "id": "lagoon",
+    "format": "wajha.template",
+    "version": 1,
+    "slides": 4,
+    "assets": 0,
+    "layoutKeys": [
+      "tall"
+    ],
+    "languages": [
+      "en-US",
+      "ar-SA"
+    ],
+    "validateTemplateChanges": 0,
+    "firstChanges": []
+  }
+}

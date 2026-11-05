@@ -1,0 +1,56 @@
+{
+  "name": "Zad",
+  "languages": ["en", "ar"],
+  "slides": [
+    {
+      "texts": {
+        "en": { "headline": "Know where your *money* goes", "subtitle": "Every riyal sorted, without effort." },
+        "ar": { "headline": "اعرف أين يذهب *مالك*", "subtitle": "كل ريال مصنّف بدون أي جهد." }
+      },
+      "shots": {
+        "iphone": { "main": "../screenshots/iphone-1-1320x2868.png" },
+        "android-phone": { "main": "../screenshots/android-1-1080x2400.png" }
+      }
+    },
+    {
+      "texts": {
+        "en": { "headline": "Set a *budget* in seconds", "subtitle": "Pick a limit. We keep watch." },
+        "ar": { "headline": "حدّد *ميزانيتك* في ثوانٍ", "subtitle": "اختر الحد، ونحن نراقب عنك." }
+      },
+      "shots": {
+        "iphone": { "main": "../screenshots/iphone-2-1320x2868.png" },
+        "android-phone": { "main": "../screenshots/android-2-1080x2400.png" }
+      }
+    },
+    {
+      "texts": {
+        "en": { "headline": "Plan *together*", "subtitle": "Share goals with family and see the whole picture." },
+        "ar": { "headline": "خططوا *معًا*", "subtitle": "شارك أهدافك مع العائلة وشاهد الصورة كاملة." }
+      },
+      "shots": {
+        "iphone": { "main": "../screenshots/iphone-3-1320x2868.png", "second": "../screenshots/iphone-1-1320x2868.png" },
+        "android-phone": { "main": "../screenshots/android-3-1080x2400.jpg", "second": "../screenshots/android-1-1080x2400.png" }
+      }
+    },
+    {
+      "texts": {
+        "en": { "headline": "Alerts that *help*", "subtitle": "A calm nudge before you overspend." },
+        "ar": { "headline": "تنبيهات *مفيدة*", "subtitle": "تذكير هادئ قبل أن تتجاوز الحد." }
+      },
+      "shots": {
+        "iphone": { "main": "../screenshots/iphone-1-1320x2868.png" },
+        "android-phone": { "main": "../screenshots/android-2-1080x2400.png" }
+      }
+    },
+    {
+      "texts": {
+        "en": { "headline": "Your month, *at a glance*", "subtitle": "Clear charts. No spreadsheets." },
+        "ar": { "headline": "شهرك *بنظرة واحدة*", "subtitle": "رسوم واضحة، بلا جداول." }
+      },
+      "shots": {
+        "iphone": { "main": "../screenshots/iphone-2-1320x2868.png" },
+        "android-phone": { "main": "../screenshots/android-3-1080x2400.jpg" }
+      }
+    }
+  ]
+}

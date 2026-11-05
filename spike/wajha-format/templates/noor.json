@@ -1,0 +1,1103 @@
+{
+  "format": "wajha.template",
+  "version": 1,
+  "id": "noor",
+  "name": "Noor",
+  "author": "Wajha",
+  "description": "Designed Arabic first: deep emerald with a fine lattice, gold eight-point stars and rings inspired by Islamic geometric ornament, Cairo headlines and Noto Sans Arabic text.",
+  "category": "dark",
+  "tags": [
+    "arabic",
+    "emerald",
+    "gold",
+    "geometric",
+    "books"
+  ],
+  "theme": {
+    "background": {
+      "fill": {
+        "type": "radial",
+        "cx": 0.5,
+        "cy": 0.32,
+        "radius": 0.92,
+        "stops": [
+          {
+            "offset": 0,
+            "color": "#14493f"
+          },
+          {
+            "offset": 0.55,
+            "color": "#0a2c27"
+          },
+          {
+            "offset": 1,
+            "color": "#061a17"
+          }
+        ]
+      },
+      "pattern": {
+        "kind": "diagonal",
+        "color": "#e9c98b",
+        "opacity": 0.05,
+        "scale": 0.055
+      }
+    },
+    "panorama": false,
+    "fonts": {
+      "heading": "Cairo Variable",
+      "body": "Noto Sans Arabic Variable"
+    },
+    "palette": [
+      "#e9c98b",
+      "#2bb39a",
+      "#f4a261",
+      "#fbf5e6",
+      "#061a17"
+    ],
+    "mockDark": true
+  },
+  "slides": [
+    {
+      "texts": {
+        "en-US": {
+          "headline": "Read and *listen* in Arabic",
+          "subtitle": "Thousands of books and audiobooks in your pocket."
+        },
+        "ar-SA": {
+          "headline": "اقرأ *واستمع* بالعربية",
+          "subtitle": "آلاف الكتب والكتب الصوتية بين يديك."
+        }
+      },
+      "layouts": {
+        "tall": {
+          "background": null,
+          "elements": [
+            {
+              "id": "glow-1",
+              "kind": "shape",
+              "x": 0.5,
+              "y": 0.62,
+              "rotation": 0,
+              "opacity": 0.4,
+              "shape": "circle",
+              "width": 0.9,
+              "height": 0.9,
+              "fill": {
+                "type": "solid",
+                "color": "#1f8a72"
+              },
+              "radius": 0,
+              "stroke": 0,
+              "blur": 0.14,
+              "seed": 0
+            },
+            {
+              "id": "rect-1",
+              "name": "Star",
+              "kind": "shape",
+              "x": 0.5,
+              "y": 0.62,
+              "rotation": 0,
+              "opacity": 0.07,
+              "shape": "rect",
+              "width": 0.78,
+              "height": 0.78,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "rect-2",
+              "name": "Star",
+              "kind": "shape",
+              "x": 0.5,
+              "y": 0.62,
+              "rotation": 45,
+              "opacity": 0.07,
+              "shape": "rect",
+              "width": 0.78,
+              "height": 0.78,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "ring-1",
+              "name": "Gold ring",
+              "kind": "shape",
+              "x": 0.5,
+              "y": 0.62,
+              "rotation": 0,
+              "opacity": 0.4,
+              "shape": "ring",
+              "width": 1.16,
+              "height": 1.16,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0.003,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "ring-2",
+              "name": "Gold ring",
+              "kind": "shape",
+              "x": 0.5,
+              "y": 0.62,
+              "rotation": 0,
+              "opacity": 0.32,
+              "shape": "ring",
+              "width": 1.06,
+              "height": 1.06,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0.0015,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "rect-3",
+              "name": "Star",
+              "kind": "shape",
+              "x": 0.5,
+              "y": 0.042,
+              "rotation": 0,
+              "opacity": 1,
+              "shape": "rect",
+              "width": 0.04,
+              "height": 0.04,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "device",
+              "kind": "device",
+              "x": 0.5,
+              "y": 0.6551,
+              "rotation": 0,
+              "opacity": 1,
+              "frame": "iphone",
+              "style": {
+                "color": "#151518",
+                "finish": "metal",
+                "bezel": "black"
+              },
+              "width": 0.8,
+              "slot": "main",
+              "cornerRadius": 0.06,
+              "shadow": {
+                "color": "#000000a6",
+                "blur": 0.08,
+                "x": 0,
+                "y": 0.035
+              }
+            },
+            {
+              "id": "rect-4",
+              "name": "Star",
+              "kind": "shape",
+              "x": 0.5,
+              "y": 0.042,
+              "rotation": 45,
+              "opacity": 1,
+              "shape": "rect",
+              "width": 0.04,
+              "height": 0.04,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "headline",
+              "kind": "text",
+              "x": 0.5,
+              "y": 0.1531,
+              "rotation": 0,
+              "opacity": 1,
+              "key": "headline",
+              "width": 0.86,
+              "valign": "bottom",
+              "style": {
+                "font": "Cairo Variable",
+                "weight": 800,
+                "size": 0.088,
+                "lineHeight": 1.22,
+                "letterSpacing": -0.01,
+                "color": "#fbf5e6",
+                "highlight": "#e9c98b",
+                "highlightMode": "color",
+                "align": "center",
+                "transform": "none",
+                "maxLines": 2,
+                "shadow": null
+              }
+            },
+            {
+              "id": "subtitle",
+              "kind": "text",
+              "x": 0.5,
+              "y": 0.1669,
+              "rotation": 0,
+              "opacity": 1,
+              "key": "subtitle",
+              "width": 0.8,
+              "valign": "top",
+              "style": {
+                "font": "Noto Sans Arabic Variable",
+                "weight": 500,
+                "size": 0.04,
+                "lineHeight": 1.45,
+                "letterSpacing": 0,
+                "color": "#d3e2da",
+                "highlight": "#e9c98b",
+                "highlightMode": "color",
+                "align": "center",
+                "transform": "none",
+                "maxLines": 2,
+                "shadow": null
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "texts": {
+        "en-US": {
+          "headline": "Your library, *everywhere*",
+          "subtitle": "Pick up where you left off, on every device."
+        },
+        "ar-SA": {
+          "headline": "مكتبتك *ترافقك* أينما كنت",
+          "subtitle": "تابع القراءة من حيث توقفت على كل أجهزتك."
+        }
+      },
+      "layouts": {
+        "tall": {
+          "background": null,
+          "elements": [
+            {
+              "id": "rect-1",
+              "name": "Star",
+              "kind": "shape",
+              "x": 0.56,
+              "y": 0.6,
+              "rotation": 0,
+              "opacity": 0.07,
+              "shape": "rect",
+              "width": 0.7020000000000001,
+              "height": 0.7020000000000001,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "rect-2",
+              "name": "Star",
+              "kind": "shape",
+              "x": 0.56,
+              "y": 0.6,
+              "rotation": 45,
+              "opacity": 0.07,
+              "shape": "rect",
+              "width": 0.7020000000000001,
+              "height": 0.7020000000000001,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "ring-1",
+              "name": "Gold ring",
+              "kind": "shape",
+              "x": 0.56,
+              "y": 0.6,
+              "rotation": 0,
+              "opacity": 0.4,
+              "shape": "ring",
+              "width": 1.044,
+              "height": 1.044,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0.003,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "ring-2",
+              "name": "Gold ring",
+              "kind": "shape",
+              "x": 0.56,
+              "y": 0.6,
+              "rotation": 0,
+              "opacity": 0.32,
+              "shape": "ring",
+              "width": 0.9540000000000001,
+              "height": 0.9540000000000001,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0.0015,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "rect-3",
+              "name": "Star",
+              "kind": "shape",
+              "x": 0.5,
+              "y": 0.042,
+              "rotation": 0,
+              "opacity": 1,
+              "shape": "rect",
+              "width": 0.04,
+              "height": 0.04,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "device",
+              "kind": "device",
+              "x": 0.54,
+              "y": 0.65048,
+              "rotation": -7,
+              "opacity": 1,
+              "frame": "iphone",
+              "style": {
+                "color": "#151518",
+                "finish": "metal",
+                "bezel": "black"
+              },
+              "width": 0.78,
+              "slot": "main",
+              "cornerRadius": 0.06,
+              "shadow": {
+                "color": "#000000a6",
+                "blur": 0.08,
+                "x": 0,
+                "y": 0.035
+              }
+            },
+            {
+              "id": "rect-4",
+              "name": "Star",
+              "kind": "shape",
+              "x": 0.5,
+              "y": 0.042,
+              "rotation": 45,
+              "opacity": 1,
+              "shape": "rect",
+              "width": 0.04,
+              "height": 0.04,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "headline",
+              "kind": "text",
+              "x": 0.5,
+              "y": 0.1531,
+              "rotation": 0,
+              "opacity": 1,
+              "key": "headline",
+              "width": 0.86,
+              "valign": "bottom",
+              "style": {
+                "font": "Cairo Variable",
+                "weight": 800,
+                "size": 0.088,
+                "lineHeight": 1.22,
+                "letterSpacing": -0.01,
+                "color": "#fbf5e6",
+                "highlight": "#e9c98b",
+                "highlightMode": "color",
+                "align": "center",
+                "transform": "none",
+                "maxLines": 2,
+                "shadow": null
+              }
+            },
+            {
+              "id": "subtitle",
+              "kind": "text",
+              "x": 0.5,
+              "y": 0.1669,
+              "rotation": 0,
+              "opacity": 1,
+              "key": "subtitle",
+              "width": 0.8,
+              "valign": "top",
+              "style": {
+                "font": "Noto Sans Arabic Variable",
+                "weight": 500,
+                "size": 0.04,
+                "lineHeight": 1.45,
+                "letterSpacing": 0,
+                "color": "#d3e2da",
+                "highlight": "#e9c98b",
+                "highlightMode": "color",
+                "align": "center",
+                "transform": "none",
+                "maxLines": 2,
+                "shadow": null
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "texts": {
+        "en-US": {
+          "headline": "Voices that *captivate*",
+          "subtitle": "Novels and nonfiction, narrated by the finest voices."
+        },
+        "ar-SA": {
+          "headline": "أصوات *تأسرك*",
+          "subtitle": "روايات وكتب يرويها نخبة من أجمل الأصوات العربية."
+        }
+      },
+      "layouts": {
+        "tall": {
+          "background": null,
+          "elements": [
+            {
+              "id": "glow-1",
+              "kind": "shape",
+              "x": 0.5,
+              "y": 0.66,
+              "rotation": 0,
+              "opacity": 0.35,
+              "shape": "circle",
+              "width": 1,
+              "height": 1,
+              "fill": {
+                "type": "solid",
+                "color": "#1f8a72"
+              },
+              "radius": 0,
+              "stroke": 0,
+              "blur": 0.14,
+              "seed": 0
+            },
+            {
+              "id": "device-second",
+              "kind": "device",
+              "x": 0.7,
+              "y": 0.60883,
+              "rotation": 6,
+              "opacity": 1,
+              "frame": "iphone",
+              "style": {
+                "color": "#151518",
+                "finish": "metal",
+                "bezel": "black"
+              },
+              "width": 0.6,
+              "slot": "second",
+              "cornerRadius": 0.06,
+              "shadow": {
+                "color": "#000000a6",
+                "blur": 0.08,
+                "x": 0,
+                "y": 0.035
+              }
+            },
+            {
+              "id": "rect-1",
+              "name": "Star",
+              "kind": "shape",
+              "x": 0.5,
+              "y": 0.042,
+              "rotation": 0,
+              "opacity": 1,
+              "shape": "rect",
+              "width": 0.04,
+              "height": 0.04,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "rect-2",
+              "name": "Star",
+              "kind": "shape",
+              "x": 0.5,
+              "y": 0.042,
+              "rotation": 45,
+              "opacity": 1,
+              "shape": "rect",
+              "width": 0.04,
+              "height": 0.04,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "headline",
+              "kind": "text",
+              "x": 0.5,
+              "y": 0.1531,
+              "rotation": 0,
+              "opacity": 1,
+              "key": "headline",
+              "width": 0.86,
+              "valign": "bottom",
+              "style": {
+                "font": "Cairo Variable",
+                "weight": 800,
+                "size": 0.088,
+                "lineHeight": 1.22,
+                "letterSpacing": -0.01,
+                "color": "#fbf5e6",
+                "highlight": "#e9c98b",
+                "highlightMode": "color",
+                "align": "center",
+                "transform": "none",
+                "maxLines": 2,
+                "shadow": null
+              }
+            },
+            {
+              "id": "subtitle",
+              "kind": "text",
+              "x": 0.5,
+              "y": 0.1669,
+              "rotation": 0,
+              "opacity": 1,
+              "key": "subtitle",
+              "width": 0.8,
+              "valign": "top",
+              "style": {
+                "font": "Noto Sans Arabic Variable",
+                "weight": 500,
+                "size": 0.04,
+                "lineHeight": 1.45,
+                "letterSpacing": 0,
+                "color": "#d3e2da",
+                "highlight": "#e9c98b",
+                "highlightMode": "color",
+                "align": "center",
+                "transform": "none",
+                "maxLines": 2,
+                "shadow": null
+              }
+            },
+            {
+              "id": "device",
+              "kind": "device",
+              "x": 0.33,
+              "y": 0.57827,
+              "rotation": -5,
+              "opacity": 1,
+              "frame": "iphone",
+              "style": {
+                "color": "#151518",
+                "finish": "metal",
+                "bezel": "black"
+              },
+              "width": 0.63,
+              "slot": "main",
+              "cornerRadius": 0.06,
+              "shadow": {
+                "color": "#000000a6",
+                "blur": 0.08,
+                "x": 0,
+                "y": 0.035
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "texts": {
+        "en-US": {
+          "headline": "Read *more* every day",
+          "subtitle": "Daily goals and streaks that keep you going."
+        },
+        "ar-SA": {
+          "headline": "اقرأ *أكثر* كل يوم",
+          "subtitle": "أهداف قراءة يومية وسلاسل إنجاز تحفّزك."
+        }
+      },
+      "layouts": {
+        "tall": {
+          "background": null,
+          "elements": [
+            {
+              "id": "rect-1",
+              "name": "Star",
+              "kind": "shape",
+              "x": 0.5,
+              "y": 0.36,
+              "rotation": 0,
+              "opacity": 0.07,
+              "shape": "rect",
+              "width": 0.741,
+              "height": 0.741,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "rect-2",
+              "name": "Star",
+              "kind": "shape",
+              "x": 0.5,
+              "y": 0.36,
+              "rotation": 45,
+              "opacity": 0.07,
+              "shape": "rect",
+              "width": 0.741,
+              "height": 0.741,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "ring-1",
+              "name": "Gold ring",
+              "kind": "shape",
+              "x": 0.5,
+              "y": 0.36,
+              "rotation": 0,
+              "opacity": 0.4,
+              "shape": "ring",
+              "width": 1.1019999999999999,
+              "height": 1.1019999999999999,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0.003,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "ring-2",
+              "name": "Gold ring",
+              "kind": "shape",
+              "x": 0.5,
+              "y": 0.36,
+              "rotation": 0,
+              "opacity": 0.32,
+              "shape": "ring",
+              "width": 1.007,
+              "height": 1.007,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0.0015,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "subtitle",
+              "kind": "text",
+              "x": 0.5,
+              "y": 0.8269,
+              "rotation": 0,
+              "opacity": 1,
+              "key": "subtitle",
+              "width": 0.8,
+              "valign": "top",
+              "style": {
+                "font": "Noto Sans Arabic Variable",
+                "weight": 500,
+                "size": 0.04,
+                "lineHeight": 1.45,
+                "letterSpacing": 0,
+                "color": "#d3e2da",
+                "highlight": "#e9c98b",
+                "highlightMode": "color",
+                "align": "center",
+                "transform": "none",
+                "maxLines": 2,
+                "shadow": null
+              }
+            },
+            {
+              "id": "device",
+              "kind": "device",
+              "x": 0.5,
+              "y": 0.2849,
+              "rotation": 0,
+              "opacity": 1,
+              "frame": "iphone",
+              "style": {
+                "color": "#151518",
+                "finish": "metal",
+                "bezel": "black"
+              },
+              "width": 0.8,
+              "slot": "main",
+              "cornerRadius": 0.06,
+              "shadow": {
+                "color": "#000000a6",
+                "blur": 0.08,
+                "x": 0,
+                "y": 0.035
+              }
+            },
+            {
+              "id": "rect-3",
+              "name": "Star",
+              "kind": "shape",
+              "x": 0.5,
+              "y": 0.715,
+              "rotation": 0,
+              "opacity": 1,
+              "shape": "rect",
+              "width": 0.034,
+              "height": 0.034,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "rect-4",
+              "name": "Star",
+              "kind": "shape",
+              "x": 0.5,
+              "y": 0.715,
+              "rotation": 45,
+              "opacity": 1,
+              "shape": "rect",
+              "width": 0.034,
+              "height": 0.034,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "headline",
+              "kind": "text",
+              "x": 0.5,
+              "y": 0.8131,
+              "rotation": 0,
+              "opacity": 1,
+              "key": "headline",
+              "width": 0.86,
+              "valign": "bottom",
+              "style": {
+                "font": "Cairo Variable",
+                "weight": 800,
+                "size": 0.088,
+                "lineHeight": 1.22,
+                "letterSpacing": -0.01,
+                "color": "#fbf5e6",
+                "highlight": "#e9c98b",
+                "highlightMode": "color",
+                "align": "center",
+                "transform": "none",
+                "maxLines": 2,
+                "shadow": null
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "texts": {
+        "en-US": {
+          "headline": "Share what *inspires* you",
+          "subtitle": "Quote your favorite passages and share them with friends."
+        },
+        "ar-SA": {
+          "headline": "شارك *ما يُلهمك*",
+          "subtitle": "اقتبس أجمل العبارات وشاركها مع أصدقائك."
+        }
+      },
+      "layouts": {
+        "tall": {
+          "background": null,
+          "elements": [
+            {
+              "id": "rect-1",
+              "name": "Star",
+              "kind": "shape",
+              "x": 0.5,
+              "y": 0.64,
+              "rotation": 0,
+              "opacity": 0.07,
+              "shape": "rect",
+              "width": 0.8424,
+              "height": 0.8424,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "rect-2",
+              "name": "Star",
+              "kind": "shape",
+              "x": 0.5,
+              "y": 0.64,
+              "rotation": 45,
+              "opacity": 0.07,
+              "shape": "rect",
+              "width": 0.8424,
+              "height": 0.8424,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "ring-1",
+              "name": "Gold ring",
+              "kind": "shape",
+              "x": 0.5,
+              "y": 0.64,
+              "rotation": 0,
+              "opacity": 0.4,
+              "shape": "ring",
+              "width": 1.2528,
+              "height": 1.2528,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0.003,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "ring-2",
+              "name": "Gold ring",
+              "kind": "shape",
+              "x": 0.5,
+              "y": 0.64,
+              "rotation": 0,
+              "opacity": 0.32,
+              "shape": "ring",
+              "width": 1.1448,
+              "height": 1.1448,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0.0015,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "device",
+              "kind": "device",
+              "x": 0.5,
+              "y": 0.64585,
+              "rotation": 0,
+              "opacity": 1,
+              "frame": "iphone",
+              "style": {
+                "color": "#151518",
+                "finish": "metal",
+                "bezel": "black"
+              },
+              "width": 0.76,
+              "slot": "main",
+              "cornerRadius": 0.06,
+              "shadow": {
+                "color": "#000000a6",
+                "blur": 0.08,
+                "x": 0,
+                "y": 0.035
+              }
+            },
+            {
+              "id": "rect-3",
+              "name": "Star",
+              "kind": "shape",
+              "x": 0.5,
+              "y": 0.042,
+              "rotation": 0,
+              "opacity": 1,
+              "shape": "rect",
+              "width": 0.04,
+              "height": 0.04,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "rect-4",
+              "name": "Star",
+              "kind": "shape",
+              "x": 0.5,
+              "y": 0.042,
+              "rotation": 45,
+              "opacity": 1,
+              "shape": "rect",
+              "width": 0.04,
+              "height": 0.04,
+              "fill": {
+                "type": "solid",
+                "color": "#e9c98b"
+              },
+              "radius": 0,
+              "stroke": 0,
+              "blur": 0,
+              "seed": 0
+            },
+            {
+              "id": "headline",
+              "kind": "text",
+              "x": 0.5,
+              "y": 0.1531,
+              "rotation": 0,
+              "opacity": 1,
+              "key": "headline",
+              "width": 0.86,
+              "valign": "bottom",
+              "style": {
+                "font": "Cairo Variable",
+                "weight": 800,
+                "size": 0.088,
+                "lineHeight": 1.22,
+                "letterSpacing": -0.01,
+                "color": "#fbf5e6",
+                "highlight": "#e9c98b",
+                "highlightMode": "color",
+                "align": "center",
+                "transform": "none",
+                "maxLines": 2,
+                "shadow": null
+              }
+            },
+            {
+              "id": "subtitle",
+              "kind": "text",
+              "x": 0.5,
+              "y": 0.1669,
+              "rotation": 0,
+              "opacity": 1,
+              "key": "subtitle",
+              "width": 0.8,
+              "valign": "top",
+              "style": {
+                "font": "Noto Sans Arabic Variable",
+                "weight": 500,
+                "size": 0.04,
+                "lineHeight": 1.45,
+                "letterSpacing": 0,
+                "color": "#d3e2da",
+                "highlight": "#e9c98b",
+                "highlightMode": "color",
+                "align": "center",
+                "transform": "none",
+                "maxLines": 2,
+                "shadow": null
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "assets": {}
+}

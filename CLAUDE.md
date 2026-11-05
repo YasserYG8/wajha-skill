@@ -8,7 +8,9 @@ An agent skill, modelled on the brag skill. A developer runs `/wajha` inside the
 
 ## Status
 
-The skill is not built yet. The repo has this plan, a README, an MIT license, and the OpenSpec files. The plan below was agreed in an earlier session.
+The skill is not built yet. The repo has this plan, a README, an MIT license, the OpenSpec files, and the format proof in `spike/wajha-format/`.
+
+The format proof is done (change `prove-wajha-format`). Decision: **go, but not tested on desktop**. A `.wajha` file made by our script opens in Wajha's browser version without changes and exports real PNGs. The desktop app was not tested. Read `spike/wajha-format/findings.md` before building the skill: it has the results, the limits, and what the skill must carry over.
 
 ## Working together
 
@@ -18,7 +20,20 @@ More than one person builds this repo, and `main` on GitHub is shared. Do not re
 
 ## Commands
 
-None yet. There is no build, lint, or test setup. Add the real commands here when they exist.
+There is no build or lint setup for the skill yet. The format proof in `spike/wajha-format/` has these commands. Run them from that folder (`npm install` once, for `esbuild`). Some need a Wajha clone at commit `2246e6d` next to this repo (`../wajha-clone`, or set `WAJHA_CLONE`) with `npm install` run in it.
+
+```sh
+node --test build_wajha.test.mjs             # 39 tests for the build script. Needs only Node, and the screenshots (next line).
+node run-in-clone.mjs make-screenshots       # makes screenshots/ (git ignores it). Run this first on a fresh checkout.
+node make-samples.mjs                        # builds the 13 sample .wajha files in out/samples/
+node run-in-clone.mjs import-samples         # Wajha's real importer on every sample, 16 checks (needs the clone)
+node make-review-samples.mjs && node run-in-clone.mjs render-review-en    # draws slides as PNGs in out/png/ (render-review-ar for Arabic)
+node build-bundle.mjs                        # rebuilds wajha-model.bundle.mjs from the clone (refuses any other commit)
+node browser-check.mjs <sample> <port>       # opens a sample in a running Wajha dev server, runs Export, checks the PNGs
+node build_wajha.mjs --template templates/noor.json --input plans/zad-both.json --out out/x.wajha   # the build script itself
+```
+
+Run one test file in the clone with `node run-in-clone.mjs <name>` (the name of a file in `clone-tests/`, without `.test.ts`). `run-in-clone.mjs` copies our tests into the clone as `scripts/spike-*.test.ts` and runs Wajha's own Vitest there. The browser check needs `npx vite --port <port> --strictPort` running in the clone, and a Chromium that Playwright installed.
 
 ## OpenSpec workflow
 
@@ -106,35 +121,37 @@ Each step must pass its gate before the next step starts.
 
 Example command: `/wajha --langs en,ar --tone "playful"`
 
-## Wajha format (from its docs, not yet checked in code)
+## Wajha format (checked in code and by test, at Wajha commit `2246e6d`)
 
-- A `.wajha` file is a zip with `project.json`, `assets/<assetId>`, and optional `thumb.jpg` and fonts.
-- A `.wajha-template` file is a zip with `template.json`, `assets/`, and optional `preview.jpg`.
-- Images are named by SHA-256 hash.
-- The app validates files on import: it drops unknown keys, clamps numbers, and re-hashes images. So a file can open and still look wrong.
-- `Template` in `src/model/types.ts` is the authoritative type. Format is `wajha.template`, version `1`.
-- Slides: 1 to 10. Each has `texts` keyed by language, and `layouts` keyed by `tall` (required), `tablet`, `wide`.
-- Element kinds: `device`, `text`, `shape`, `image`. Copy supports `*word*` highlights and `\n`.
-- `x` and `y` are fractions of the canvas. Lengths are fractions of the shorter side.
-- Drawing code is in `src/engine` and runs in Node via `@napi-rs/canvas` in tests. Export uses `planExport` and `runExport`.
-- `npm run dev` serves the UI at http://localhost:1420. This is a developer option. There is no hosted web version.
+Details and evidence: `spike/wajha-format/findings.md`.
+
+- A `.wajha` file is a zip with `project.json`, `assets/<assetId>`, and optional `thumb.jpg` and `fonts/`. A `.wajha-template` file has `template.json`, `assets/`, and optional `preview.jpg`.
+- **Asset names:** `<64 hex SHA-256 of the bytes>.<png|jpg|webp>`. A JPEG is `jpg`, not `jpeg`. The type comes from the file content, not the file name. The importer checks the name, the type, the size limits, and the hash.
+- **Templates and projects use different layout keys.** A template slide has `layouts` keyed by aspect class: `tall` (required, the iPhone canvas), `tablet`, `wide`. A project slide has `layouts` keyed by device family (`iphone`, `android-phone`, ...). `projectFromTemplate` converts. It stores only the primary family's layout (plus the template's own layout for another aspect class). Other families are derived by `adaptLayout` when read, and a family-default device frame becomes the family's own (`iphone` becomes `android-phone`).
+- **Screenshots:** `slide.shots` is `family -> slot -> language -> assetId`. The slot is the `slot` of a device element (`main`, `second`). A language without its own image falls back to the base language (the first one). A shot only survives if its asset is in the project's `assets` registry (`id`, `name`, `width`, `height`, `bytes`, `addedAt`).
+- **Limits:** a template has 1 to 10 slides (a project may hold up to 100). An image is at most 100 MB, 16384 px on a side, and 8192 x 8192 px in area. A text is at most 2000 characters. A `.wajha` is at most 500 MB and 2000 entries.
+- **Language codes:** Wajha's list has 51 full codes, such as `en-US`, `ar-SA`, `fr-FR`. Our script also accepts `en` (`en-US`) and `ar` (`ar-SA`). The first language is the base language.
+- **The validator does not complain.** `validateProject` throws only for serious problems. It silently drops a shot whose asset is not registered, cuts a text at 2000 characters, and clamps numbers. The importer silently drops an image whose bytes do not match its name, and then the shots that point to it, and still reports success. A file can import and look wrong. So our build script runs `validateProject` and fails on any difference between its input and its output (the "no-change gate").
+- **Screenshot shape:** a phone frame keeps its own shape. A screenshot within 20% of it makes the frame take the screenshot's shape. A screenshot further off is cropped from the centre (a 4:3 shot loses about 39% of its width). A sideways phone screenshot turns the phone on its side.
+- Format is `wajha.template` or `wajha.project`, version `1`. `src/model/types.ts` is the authoritative type. Element kinds: `device`, `text`, `shape`, `image`. Copy supports `*word*` highlights and `\n`. `x` and `y` are fractions of the canvas, and lengths are fractions of the shorter side.
+- **Drawing:** the code is in `src/engine`. `renderSlide` runs in Node with `@napi-rs/canvas`. Wajha's test helper `renderProjectSlide` draws mock screens and never our screenshots (`getImage` returns `null`), so use `spike/wajha-format/clone-tests/render-lib.ts`. Export uses `planExport` and `runExport`.
+- **Opening a file:** the browser dev version opens a `.wajha` with the "Open file…" button, and exports PNGs (tested in Chromium). `npm run dev` serves the UI at http://localhost:1420, or use `npx vite --port <port>`. This is a developer option. There is no hosted web version.
+- **Bundle:** `spike/wajha-format/wajha-model.bundle.mjs` holds Wajha's model code and `fflate` in one file (115 KB), with the pinned commit and both MIT notices in its header. It needs only Node, no `node_modules`. Rebuild it with `build-bundle.mjs` when Wajha's format version changes.
+- **Node:** the bundle and script were tested on Node 22.14 and Node 20.20, and fail on Node 18 (`crypto is not defined`, because Wajha's `newId` uses the global `crypto`). **The skill needs Node 20 or newer** (decided). `build_wajha.mjs` checks this first and stops with a clear message on an older Node.
 
 ## Not checked yet
 
-- The real `project.json` rules. The docs read so far cover the template format.
-- Whether the browser dev version can open `.wajha` files.
-- License terms for community templates in `gallery/`. The repo is MIT, but check before bundling any.
+- **The Wajha desktop app (Tauri).** The user does not want to install it for now. When they do: open `noor-both-per-language.wajha` (made by `make-samples.mjs`), click Export, look at the files, and then update the decision in `findings.md` to a full "go" (or "no-go").
+- WebKit (the engine of the macOS app). We tested in Chromium only.
+- Templates with `tablet` or `wide` layouts, or with image assets. We tested two phone-only templates without assets (`noor`, `lagoon`).
+- Real app screenshots. Our test screenshots are Wajha's own generated mock screens, with labels. Arabic copy has not been read by a native speaker.
+- License terms for community templates in `gallery/`. The repo is MIT, and the checklist asks for freely licensed images, but check the author and licence before bundling any.
 
-## First task
+## Format proof (done)
 
-Prove the riskiest part before writing any skill text:
+The first task was to prove the riskiest part before writing any skill text. It is done: change `prove-wajha-format` (archived in `openspec/changes/archive/2026-11-05-prove-wajha-format/`, and its spec is now `openspec/specs/wajha-project-build/spec.md`), code and results in `spike/wajha-format/`. The decision is **go, but not tested on desktop** (see Status). The next change builds the skill. It must carry over: the no-change gate, the bundle, a headline length limit (about 70 characters, 90 at most), and a warning for screenshots more than 20% off the phone shape. The Node 20 check is already in `build_wajha.mjs`.
 
-1. Clone Wajha outside this repo, and read `src/model/types.ts` and the import validation code.
-2. Write a small script that makes one `.wajha` file from a template and a sample image.
-3. Test it with Wajha's own import check, then try the browser dev version.
-4. Ask the user to open the final file once in the real desktop app. This is the final check.
-
-If the file works, build the skill. If not, fix the format first.
+Decided for the skill, not built yet: when `--langs` is not given, use Arabic and English, with `ar-SA` first as the base language.
 
 ## Hard parts to watch
 

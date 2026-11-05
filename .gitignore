@@ -4,3 +4,9 @@
 
 # Personal Claude Code settings
 .claude/settings.local.json
+
+# Generated output of the format proof (samples, PNGs, test installs).
+# screenshots/ is made again by: node spike/wajha-format/run-in-clone.mjs make-screenshots
+spike/wajha-format/out/
+spike/wajha-format/screenshots/
+spike/wajha-format/node_modules/
