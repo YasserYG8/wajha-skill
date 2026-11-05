@@ -29,3 +29,7 @@ The planned command looks like this. The flags may change.
 ```
 
 The first version will not take screenshots for you, and it will not export the final images. Those are ideas for later versions.
+
+## License
+
+MIT. See [LICENSE](LICENSE).

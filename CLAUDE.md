@@ -8,7 +8,13 @@ An agent skill, modelled on the brag skill. A developer runs `/wajha` inside the
 
 ## Status
 
-Nothing is built yet. This folder is new and is not a git repo yet. The plan below was agreed in an earlier session.
+The skill is not built yet. The repo has this plan, a README, an MIT license, and the OpenSpec files. The plan below was agreed in an earlier session.
+
+## Working together
+
+More than one person builds this repo, and `main` on GitHub is shared. Do not rewrite pushed commits.
+
+`skill-creator` is a local tool and is not in the repo. `skills-lock.json` records its source. To install it: `npx skills add https://github.com/anthropics/skills --skill skill-creator`.
 
 ## Commands
 
@@ -24,6 +30,7 @@ The folder uses OpenSpec (`openspec/config.yaml`, schema `spec-driven`). The con
 
 ## Links
 
+- This repo: https://github.com/YasserYG8/wajha-skill
 - Wajha repo: https://github.com/M-Alkassem/Wajha (Tauri + React + TypeScript, MIT)
 - Our issue, with the owner's answers: https://github.com/M-Alkassem/Wajha/issues/3
 - Brag repo: https://github.com/latent-spaces/brag
@@ -34,10 +41,19 @@ The folder uses OpenSpec (`openspec/config.yaml`, schema `spec-driven`). The con
 - `/wajha` is approved as the command name.
 - The skill lives in a separate repo that links back to Wajha.
 - A PR for a `wajha export` CLI is welcome, and the owner will review it.
-- The v1 format is stable. A change will bump the version.
+- The v1 project and template format is stable. A change will bump the version.
 - GitHub Discussions is now enabled.
+- The owner agreed to start: "Start on the repo, and open the `wajha export` PR whenever you're ready, I'll review it."
 
-Re-read the issue before relying on these. They were read through a summary tool, not word by word.
+Checked word by word against the issue on 2026-11-05.
+
+## What we promised in issue 3
+
+- Everything stays MIT.
+- We credit Wajha clearly.
+- We build and maintain the skill.
+- We send the PR for the `wajha export` CLI.
+- The skill works with Claude Code, Codex, or any Agent Skills-compatible agent.
 
 ## MVP scope (agreed)
 
@@ -108,7 +124,6 @@ Example command: `/wajha --langs en,ar --tone "playful"`
 - The real `project.json` rules. The docs read so far cover the template format.
 - Whether the browser dev version can open `.wajha` files.
 - License terms for community templates in `gallery/`. The repo is MIT, but check before bundling any.
-- The owner's exact wording in issue 3.
 
 ## First task
 
