@@ -1,0 +1,6 @@
+# Local AI tools. Each person installs their own. See skills-lock.json.
+.agents/
+.claude/skills/skill-creator/
+
+# Personal Claude Code settings
+.claude/settings.local.json
